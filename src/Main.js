@@ -1,34 +1,35 @@
 import React, { Component } from 'react';
-import './css/main.css';
-import './css/common.css';
 import Header from './components/Header.js';
 import TodoList from './components/TodoList.js';
 import AddNewItem from './components/AddNewItem.js';
 import DeleteCompleted from './components/DeleteCompleted.js';
+import { v4 as uuidv4 } from 'uuid';
+import './css/main.css';
+import './css/common.css';
 
 class Main extends Component {
   state = {
     todoList: [
       {
-        id: 1,
+        id: uuidv4(),
         title: 'Feed the dogs',
         description: 'Lamb-flavored for Hank and Chicken-flavored for Kuma.',
         completed: false
       },
       {
-        id: 2,
+        id: uuidv4(),
         title: 'Check stocks',
         description: 'Check your blue chips.',
         completed: true
       },
       {
-        id: 3,
+        id: uuidv4(),
         title: 'Meeting with boss',
         description: 'Prepare KPI charts.',
         completed: false
       },
       {
-        id: 4,
+        id: uuidv4(),
         title: 'Wash the car',
         completed: true
       }
@@ -53,7 +54,7 @@ class Main extends Component {
   addNewItem = function(state) {
     const todoList = this.state.todoList;
     const newTodoItem = {
-      id: todoList.length + 1,
+      id: uuidv4(),
       title: state.newItemTitle,
       description: state.newItemDesc,
       completed: false
