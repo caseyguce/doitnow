@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import '../../css/components/todo/DeleteCompleted.css'
 
 class DeleteCompleted extends Component {
@@ -11,6 +12,10 @@ class DeleteCompleted extends Component {
             </div>
         );
     }
+}
+
+DeleteCompleted.propTypes = {
+    deleteCompleted: PropTypes.func.isRequired
 }
 
 export default DeleteCompleted;

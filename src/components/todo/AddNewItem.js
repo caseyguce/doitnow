@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import '../../css/components/todo/AddNewItem.css';
 
 class AddNewItem extends Component {
@@ -74,6 +75,10 @@ class AddNewItem extends Component {
         </React.Fragment>
     );
   };
+}
+
+AddNewItem.propTypes = {
+  addNewItem: PropTypes.func.isRequired
 }
 
 export default AddNewItem;

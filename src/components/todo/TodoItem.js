@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../../css/components/todo/TodoItem.css';
 import Checkbox from './Checkbox.js';
 import Delete from './Delete.js';
+import PropTypes from 'prop-types';
 
 class TodoItem extends Component {
   getStyle = () => { return this.props.todoItem.completed ? 'completed' : ''; }
@@ -32,6 +33,12 @@ class TodoItem extends Component {
         </table>
     );
   }
+}
+
+TodoItem.propTypes = {
+  todoItem: PropTypes.object.isRequired,
+  updateStatus: PropTypes.func.isRequired,
+  deleteItem: PropTypes.func.isRequired
 }
 
 export default TodoItem;

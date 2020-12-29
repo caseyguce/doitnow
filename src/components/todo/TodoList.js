@@ -22,7 +22,9 @@ class TodoList extends Component {
 }
 
 TodoList.propTypes = {
-  todoList: PropTypes.array.isRequired
+  todoList: PropTypes.array.isRequired,
+  updateStatus: PropTypes.func.isRequired,
+  deleteItem: PropTypes.func.isRequired
 }
 
 export default TodoList;
