@@ -1,27 +1,57 @@
-.button
-{
-    margin: 5px;
-    height: 40px;
-    width: 40px;
-    padding-bottom: 3px;
-    font-size: 20px;
-    font-weight: 700;
-    border: 2px dashed sienna;
-    border-radius: 20px;
-    background: transparent;
-    transition: 400ms;
-    color: sienna;
+input[type=checkbox] {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   background: white;
+   height: 20px;
+   width: 20px;
+   border: 2px solid sienna;
+   border-radius: 4px;
 }
 
-.button:hover
-{
-    cursor: pointer;
-    color: white;
-    background-color: sienna;
-    transform: rotate(90deg);
+input[type=checkbox]:checked {
+    background-image: url('../icons/checkbox-checked.png');
+    background-size: cover;
 }
 
 table
 {
     width: 100%;
+}
+
+.button
+{
+    margin: 5px;
+    height: 40px;
+    width: 40px;
+    border: 2px dotted sienna;
+    border-radius: 20px;
+    background: transparent;
+    color: sienna;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    transition: 300ms;
+}
+
+.button:hover
+{
+    cursor: pointer;
+    background-color: sienna;
+    color: white;
+    transform: rotate(90deg);
+}
+
+.item-div
+{
+    margin: 20px 5px;
+    padding: 20px;
+    background-color: wheat;
+    border-top: 3px dashed sienna;
+    border-radius: 0 0 10px 10px;
+    transition: 200ms;
+}
+
+.item-div:hover
+{
+    background-color: burlywood;
 }

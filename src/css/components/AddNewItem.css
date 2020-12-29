@@ -1,0 +1,45 @@
+.new-item
+{
+    margin: 10px 0;
+}
+
+.new-item span
+{
+    margin-top: 4px;
+    margin-left: 1px;
+}
+
+.header
+{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.label
+{
+    text-align: right;
+    font-weight: 700;
+    width: 10%;
+}
+
+.input-cell
+{
+    width: 80%;
+}
+
+.input-cell input
+{
+    width: 95%;
+    margin: 5px;
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid sienna;
+    background: transparent;
+    transition: 300ms;
+}
+
+.confirm:hover
+{
+    transform: rotate(0);
+}

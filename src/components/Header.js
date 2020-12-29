@@ -2,7 +2,9 @@ import '../css/components/Header.css';
 
 function Header() {
     return(
-        <h1 className='header'>do it n0w.</h1>
+        <div className='header'>
+            <h1>do it now!</h1>
+        </div>
     );
 }
 

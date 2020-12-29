@@ -1,0 +1,25 @@
+.checkbox-cell
+{
+    width: 40px;
+}
+
+.item-title
+{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.item-desc
+{
+    font-size: 14px;
+}
+
+.delete-cell
+{
+    width: 30px;
+}
+
+.completed
+{
+    text-decoration: 2px solid line-through;
+}
