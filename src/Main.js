@@ -6,6 +6,7 @@ import TodoList from './components/todo/TodoList.js';
 import AddNewItem from './components/todo/AddNewItem.js';
 import DeleteCompleted from './components/todo/DeleteCompleted.js';
 import About from './components/about/About.js';
+import { v4 as uuidv4 } from 'uuid';
 import './css/main.css';
 import './css/common.css';
 
@@ -18,7 +19,10 @@ class Main extends Component {
     Axios.get('https://jsonplaceholder.typicode.com/todos?_limit=3')
       .then((result) => this.setState({
         todoList: result.data.map((toDo) => {
-          return Object.assign(toDo, {description: 'dummy description! do it now!'})
+          return Object.assign(toDo, {
+            id: uuidv4(),
+            description: 'dummy description! do it now!'
+          });
         })
       }));
   }
@@ -50,17 +54,17 @@ class Main extends Component {
 
   addNewItem = (details) => {
     let todoList = this.state.todoList;
-    let newTodoItem = {
-      title: 'New Item',
-      description: details.newItemDesc
-    };
 
     Axios.post('https://jsonplaceholder.typicode.com/todos', {
       title: details.newItemTitle,
       completed: false
     }).then((result) => {
-      Object.assign(newTodoItem, result.data);
-      this.setState({ todoList: todoList.concat(newTodoItem) });
+      this.setState({ todoList: todoList.concat(
+        Object.assign(result.data, {
+          id: uuidv4(),
+          description: details.newItemDesc
+        }))
+      });
       alert('Item added!');
     });
   }

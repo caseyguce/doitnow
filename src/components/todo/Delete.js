@@ -13,7 +13,7 @@ class Delete extends Component {
 }
 
 Delete.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   deleteItem: PropTypes.func.isRequired
 }
 

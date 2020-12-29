@@ -15,7 +15,7 @@ class TodoItem extends Component {
             <tr>
               <td className='checkbox-cell'>
                 <Checkbox
-                  key={'checkbox-todo-item' + todoItem.id}
+                  key={'checkbox-todo-item-' + todoItem.id}
                   todoItem={todoItem}
                   updateStatus={updateStatus} />
               </td>
