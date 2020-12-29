@@ -1,0 +1,27 @@
+.button
+{
+    margin: 5px;
+    height: 40px;
+    width: 40px;
+    padding-bottom: 3px;
+    font-size: 20px;
+    font-weight: 700;
+    border: 2px dashed sienna;
+    border-radius: 20px;
+    background: transparent;
+    transition: 400ms;
+    color: sienna;
+}
+
+.button:hover
+{
+    cursor: pointer;
+    color: white;
+    background-color: sienna;
+    transform: rotate(90deg);
+}
+
+table
+{
+    width: 100%;
+}
