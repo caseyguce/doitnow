@@ -1,11 +1,11 @@
-.delete-completed
+.delete-completed button
 {
     font-size: 14px;
     width: 250px;
     height: 35px;
 }
 
-.delete-completed:hover
+.delete-completed button:hover
 {
     transform: rotate(0);
 }

@@ -39,7 +39,7 @@
     transition: 300ms;
 }
 
-.confirm:hover
+.confirm-cell button:hover
 {
     transform: rotate(0);
 }

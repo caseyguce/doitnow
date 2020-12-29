@@ -53,8 +53,8 @@ class AddNewItem extends Component {
                                     onChange={this.updateNewItemDetails.bind(this)}
                                     required />
                                 </td>
-                                <td rowSpan='2'>
-                                    <button type='submit' className='button confirm'><span className='fa fa-check'></span></button>
+                                <td className='confirm-cell' rowSpan='2'>
+                                    <button type='submit' className='button'><span className='fa fa-check'></span></button>
                                 </td>
                             </tr>
                             <tr>
