@@ -38,6 +38,7 @@ class Main extends Component {
     Axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`)
       .then(() => {
         this.setState({ todoList: this.state.todoList.filter(todoItem => todoItem.id !== id) });
+        alert('Item/s deleted!');
       });
   }
 
@@ -54,13 +55,18 @@ class Main extends Component {
     }).then((result) => {
       Object.assign(newTodoItem, result.data);
       this.setState({ todoList: todoList.concat(newTodoItem) });
+      alert('Item added!');
     });
   }
 
   deleteCompleted = () => {
-    this.state.todoList
-      .filter((todoItem) => todoItem.completed)
-      .map((item) => this.deleteItem(item.id));
+    const completedItems = this.state.todoList.filter((item) => item.completed);
+
+    if (completedItems.length) {
+      completedItems.forEach((item) => this.deleteItem(item.id));
+    } else {
+      alert('No complete items to be deleted.');
+    }
   }
 
   render () {
