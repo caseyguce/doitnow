@@ -35,17 +35,23 @@ class Main extends Component {
   }
 
   deleteItem = (id) => {
-    Axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`)
+    try {
+      Axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`)
       .then(() => {
         this.setState({ todoList: this.state.todoList.filter(todoItem => todoItem.id !== id) });
-        alert('Item/s deleted!');
       });
+      return true;
+    } catch (error) {
+      alert('Error occured. Details: ' + error.message);
+      return false;
+    }
+
   }
 
   addNewItem = (details) => {
     let todoList = this.state.todoList;
     let newTodoItem = {
-      title: 'New item',
+      title: 'New Item',
       description: details.newItemDesc
     };
 
@@ -62,8 +68,8 @@ class Main extends Component {
   deleteCompleted = () => {
     const completedItems = this.state.todoList.filter((item) => item.completed);
 
-    if (completedItems.length) {
-      completedItems.forEach((item) => this.deleteItem(item.id));
+    if (completedItems.length && completedItems.every((item) => this.deleteItem(item.id))) {
+      alert('Completed items successfully deleted.');
     } else {
       alert('No complete items to be deleted.');
     }
