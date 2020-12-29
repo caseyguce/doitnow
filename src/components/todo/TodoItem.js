@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../css/components/TodoItem.css';
+import '../../css/components/todo/TodoItem.css';
 import Checkbox from './Checkbox.js';
 import Delete from './Delete.js';
 

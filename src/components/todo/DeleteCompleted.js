@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../css/components/DeleteCompleted.css'
+import '../../css/components/todo/DeleteCompleted.css'
 
 class DeleteCompleted extends Component {
     render() {

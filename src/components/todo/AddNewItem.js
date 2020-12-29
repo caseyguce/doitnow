@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../css/components/AddNewItem.css';
+import '../../css/components/todo/AddNewItem.css';
 
 class AddNewItem extends Component {
   state = {

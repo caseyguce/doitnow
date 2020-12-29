@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Header from './components/Header.js';
-import TodoList from './components/TodoList.js';
-import AddNewItem from './components/AddNewItem.js';
-import DeleteCompleted from './components/DeleteCompleted.js';
+import Header from './components/todo/Header.js';
+import TodoList from './components/todo/TodoList.js';
+import AddNewItem from './components/todo/AddNewItem.js';
+import DeleteCompleted from './components/todo/DeleteCompleted.js';
 import { v4 as uuidv4 } from 'uuid';
 import './css/main.css';
 import './css/common.css';

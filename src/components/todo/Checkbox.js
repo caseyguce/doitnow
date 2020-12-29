@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../css/components/Checkbox.css';
+import '../../css/components/todo/Checkbox.css';
 
 class Checkbox extends Component {
   render () {
