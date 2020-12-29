@@ -9,19 +9,19 @@ class AddNewItem extends Component {
     newItemDesc: ''
   };
 
-  toggleNewItemVisibility = function() {
+  toggleNewItemVisibility = () => {
     this.setState({ newItemVisibility: !this.state.newItemVisibility });
   }
 
-  getDivStyle = function() {
+  getDivStyle = () => {
     return { display: !!this.state.newItemVisibility ? 'block' : 'none'};
   }
 
-  updateNewItemDetails = function(evt) {
+  updateNewItemDetails = (evt) => {
     this.setState({ [evt.target.name]: evt.target.value });
   }
 
-  addNewItem = function(evt) {
+  addNewItem = (evt) => {
     evt.preventDefault();
     this.props.addNewItem(this.state);
     this.setState({
