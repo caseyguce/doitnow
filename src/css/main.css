@@ -13,14 +13,13 @@
 
 .main
 {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.4;
   margin: 3% auto;
+  padding: 30px 20px;
   width: 65%;
-  text-align: center;
+  background-color: #fff8dc;
   border: 2px solid sienna;
   box-shadow: 25px 20px #d9caaf;
-  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
   color: saddlebrown;
-  background-color: #fff8dc;
+  text-align: center;
 }

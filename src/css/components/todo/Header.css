@@ -1,10 +1,36 @@
+.header
+{
+    margin-bottom: 10px;
+}
+
 .header h1
 {
     font-family: 'Caveat';
     font-size: 60px;
 }
 
-.header p
+.link
 {
-    font-size: 11px;
+    text-decoration: none;
+}
+
+.link:visited
+{
+    color: burlywood;
+}
+
+.link span
+{
+    color: burlywood;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 5px;
+    transition: 200ms;
+    display: inline-block;
+}
+
+.link span:hover
+{
+    color: sienna;
+    transform: scale(1.1);
 }

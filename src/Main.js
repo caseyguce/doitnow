@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from './components/todo/Header.js';
 import TodoList from './components/todo/TodoList.js';
 import AddNewItem from './components/todo/AddNewItem.js';
 import DeleteCompleted from './components/todo/DeleteCompleted.js';
+import About from './components/about/About.js';
 import { v4 as uuidv4 } from 'uuid';
 import './css/main.css';
 import './css/common.css';
@@ -69,17 +71,24 @@ class Main extends Component {
 
   render () {
     return (
-      <div className='main'>
-        <Header />
-        <DeleteCompleted
-          deleteCompleted={this.deleteCompleted.bind(this)} />
-        <TodoList
-          todoList={this.state.todoList}
-          updateStatus={this.updateStatus.bind(this)}
-          deleteItem={this.deleteItem.bind(this)} />
-        <AddNewItem
-          addNewItem={this.addNewItem.bind(this)} />
-      </div>
+      <Router>
+        <div className='main'>
+          <Header />
+          <Route exact path='/'>
+            <DeleteCompleted
+              deleteCompleted={this.deleteCompleted.bind(this)} />
+            <TodoList
+              todoList={this.state.todoList}
+              updateStatus={this.updateStatus.bind(this)}
+              deleteItem={this.deleteItem.bind(this)} />
+            <AddNewItem
+              addNewItem={this.addNewItem.bind(this)} />
+          </Route>
+          <Route path='/about'>
+              <About />
+          </Route>
+        </div>
+      </Router>
     );
   }
 }

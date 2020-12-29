@@ -32,7 +32,7 @@ class AddNewItem extends Component {
 
   render() {
     return (
-        <div>
+        <React.Fragment>
             <button className='button new-item' onClick={this.toggleNewItemVisibility.bind(this)}>
               <span className='fa fa-plus'></span>
             </button>
@@ -71,7 +71,7 @@ class AddNewItem extends Component {
                     </table>
                 </form>
             </div>
-        </div>
+        </React.Fragment>
     );
   };
 }
